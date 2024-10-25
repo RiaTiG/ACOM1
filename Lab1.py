@@ -8,19 +8,19 @@ import numpy as np
 # cv2.namedWindow('Display1',cv2.WINDOW_NORMAL)
 # cv2.namedWindow('Display2',cv2.WINDOW_FULLSCREEN)
 # cv2.namedWindow('Display3',cv2.WINDOW_FREERATIO)
-# cv2.imshow('Display2',img1)
+# cv2.imshow('Display3',img2)
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
 
 # Задание 3
-# cap = cv2.VideoCapture('video.mp4',cv2.CAP_ANY)
+# cap = cv2.VideoCapture('o-velikiy-sup-navarili.mp4',cv2.CAP_ANY)
 # while True:
 #     ret, frame = cap.read()
 #     if not(ret):
 #         break
-#     #gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-#     #cv2.imshow('frame',gray)
-#     cv2.imshow('frame', frame)
+#     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+#     cv2.imshow('frame',gray)
+#     #cv2.imshow('frame', frame)
 #     if cv2.waitKey(1) & 0xFF == 27:
 #         break
 # cap.release()
@@ -71,7 +71,7 @@ import numpy as np
 #     cv2.polylines(frame,[points1, points2], isClosed=True, color=(255, 0, 0), thickness=5)
 
 #     cv2.imshow('frame', frame)
-#     if cv.waitKey(1) & 0xFF == 27:
+#     if cv2.waitKey(1) & 0xFF == 27:
 #         break
 
 # cap.release()
@@ -135,12 +135,12 @@ import numpy as np
 # cv2.destroyAllWindows()
 
 #Задание 9
-# cap=cv.VideoCapture("rtsp://192.168.1.64:8080/h264_pcm.sdp")
+# cap=cv2.VideoCapture("rtsp://192.168.1.64:8080/h264_pcm.sdp")
 # while True:
 #     ret, frame = cap.read()
 #     if not(ret):
 #         break
-#     cv.imshow('mp4',frame)
-#     if cv.waitKey(1) & 0xFF == 27:
+#     cv2.imshow('mp4',frame)
+#     if cv2.waitKey(1) & 0xFF == 27:
 #         break
 
