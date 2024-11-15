@@ -15,12 +15,13 @@ def gauss(size, sigma):
     return ker
 
 # Вывод матриц
-# val = [3, 5, 7]
-# for size in val:
-#     ker = gauss(size, sigma)
-#     norm_ker = ker / np.sum(ker)
-#     print(f"Матрица {size}*{size} :\n{ker}\n")
-#     print(f"Нормированная {size}*{size} :\n{norm_ker}\n")
+sigma = 0.1
+val = [3, 5, 7]
+for size in val:
+    ker = gauss(size, sigma)
+    norm_ker = ker / np.sum(ker)
+    print(f"Матрица {size}*{size} :\n{ker}\n")
+    print(f"Нормированная {size}*{size} :\n{norm_ker}\n")
 
 def filter(image, size, sigma):
     ker = gauss(size, sigma)
