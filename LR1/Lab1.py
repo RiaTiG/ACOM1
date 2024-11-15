@@ -78,24 +78,24 @@ import numpy as np
 # cv2.destroyAllWindows()
 
 # Задание 7
-# cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 
-# fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-# out = cv2.VideoWriter('output2.avi', fourcc, 20.0, (640, 480))
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter('motion_video.avi', fourcc, 20.0, (640, 480))
 
-# while True:
-#     ret, frame = cap.read()
-#     if not ret:
-#         break
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
 
-#     out.write(frame)
-#     cv2.imshow('Webcam', frame)
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
+    out.write(frame)
+    cv2.imshow('Webcam', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-# cap.release()
-# out.release()
-# cv2.destroyAllWindows()
+cap.release()
+out.release()
+cv2.destroyAllWindows()
 
 # Задание 8
 # cap=cv2.VideoCapture(0)
