@@ -32,4 +32,4 @@ def main(path_to_file, kernel_size, standart_deviation, treshLow, min_area):
         oldFrame = blurGray
     outputVideo.release()
 
-main("C:\ACOM\LR1\o-velikiy-sup-navarili.mp4", 3, 60, 60, 20)
+main("C:\ACOM\LR5\ЛР4_main_video.mov", 3, 60, 120, 20)

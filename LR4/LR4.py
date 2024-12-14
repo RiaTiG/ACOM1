@@ -82,9 +82,9 @@ def Kenny(image, size, sigma, low, high):
 
     cv.imshow('original', img)
     cv.imshow('blur', blur)
-    cv.imshow("length",lengths)
-    cv.imshow("angl",angles)
     cv.imshow("filtered",filt)
+    # cv.imshow("length",lengths)
+    # cv.imshow("angl",angles)
     cv.waitKey(0)
     cv.destroyAllWindows()
-Kenny("LR3\kot.jpg", 3, 1, 1.1, 1.022)
+Kenny("IW1\MPT.jpg", 3, 1, 1.3, 1.2)
