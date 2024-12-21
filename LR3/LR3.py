@@ -4,10 +4,11 @@ import numpy as np
 image = cv2.imread('C:/ACOM/LR3/kot.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-def gauss(size, sigma):
+def gauss(size, sigma: float):
+    size = abs(size)
     ker = np.zeros((size, size))
-    a = size // 2
-    b = size // 2
+    a = size // 2 + 1 
+    b = size // 2 + 1
 
     for x in range(size):
         for y in range(size):
@@ -23,16 +24,18 @@ for size in val:
     print(f"Матрица {size}*{size} :\n{ker}\n")
     print(f"Нормированная {size}*{size} :\n{norm_ker}\n")
 
-def filter(image, size, sigma):
+def filter(image, size, sigma:float):
+    size = abs(size)
     ker = gauss(size, sigma)
     norm_ker = ker / np.sum(ker)
     image_copy = image.copy()
-    mean = size // 2
+    mean = size // 2 +1
     h = image_copy.shape[0]
     w = image_copy.shape[1]
-
-    for i in range(mean, h - mean):
-        for j in range(mean, w - mean):
+    test = np.zeros_like(image)
+    
+    for i in range(h):
+        for j in range(w):
             sum = 0
             for k in range(-mean, mean + 1):
                 for l in range(-mean, mean + 1):
